@@ -1,0 +1,5 @@
+baens/parlamentar/ParlamentarBaen.class
+model/Deputados.class
+model/Consulta.class
+com/mycompany/consultaparlamentar/JAXRSConfiguration.class
+com/mycompany/consultaparlamentar/resources/JavaEE8Resource.class
