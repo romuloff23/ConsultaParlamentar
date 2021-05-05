@@ -23,7 +23,15 @@ import model.Deputados;
 public class ParlamentarBaen implements Serializable {
 
     private List<Deputados> allParlamentar;
-    private Deputados deputado;
+    private Deputados deputadoSelecionado;
+
+    public Deputados getDeputadoSelecionado() {
+        return deputadoSelecionado;
+    }
+
+    public void setDeputadoSelecionado(Deputados deputadoSelecionado) {
+        this.deputadoSelecionado = deputadoSelecionado;
+    }
     
     
     public List<Deputados> getAllParlamentar() {
@@ -32,11 +40,7 @@ public class ParlamentarBaen implements Serializable {
         return allParlamentar;
     }
 
-    public Deputados getDeputado(){
-        return deputado;
-    }
-    public String setDeputado(Deputados d){
-        deputado = d;
+    public String irPergil(){
         return "perfil?faces-redirect=true";
     }
 }
