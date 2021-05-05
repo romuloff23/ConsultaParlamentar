@@ -32,7 +32,9 @@
                     </p:column>
                     
                     <p:column exportable="false">
-                        <p:commandButton value="Visualizar Perfil" action="#{parlamentarBaen.deputado(product)}" />
+                        <p:commandButton value="Visualizar Perfils" >
+                            <f:setPropertyActionListener value="#{product}" target="#{parlamentarBaen.deputado}"/>
+                        </p:commandButton>
                     </p:column>
                 </p:dataTable>
             </div>

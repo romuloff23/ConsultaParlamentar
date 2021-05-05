@@ -19,11 +19,13 @@ import model.Deputados;
  */
 @Named
 @ViewScoped
-@RequestScoped
+
 public class ParlamentarBaen implements Serializable {
 
     private List<Deputados> allParlamentar;
     private Deputados deputado;
+    
+    
     public List<Deputados> getAllParlamentar() {
         Consulta consulta = new Consulta();
         allParlamentar = consulta.getDeputados();
@@ -33,7 +35,7 @@ public class ParlamentarBaen implements Serializable {
     public Deputados getDeputado(){
         return deputado;
     }
-    public void setDeputado(Deputado d){
+    public String setDeputado(Deputados d){
         deputado = d;
         return "perfil?faces-redirect=true";
     }
