@@ -28,6 +28,7 @@ public class ParlamentarBaen implements Serializable {
     }
 
     public String irParaPerfil(Deputados a){
+        System.out.println(a.getNome());
         FacesContext.getCurrentInstance().getExternalContext().getFlash().put("deputado", a);
         return "perfil?faces-redirect=true";
     }
