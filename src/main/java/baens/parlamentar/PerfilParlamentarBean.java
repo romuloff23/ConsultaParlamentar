@@ -7,7 +7,9 @@ package baens.parlamentar;
 
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 import model.Consulta;
 import model.Deputados;
@@ -17,16 +19,10 @@ import model.Deputados;
  * @author romulo
  */
 @Named
-public final class PerfilParlamentarBean implements Serializable  {
+@RequestScoped
+public class PerfilParlamentarBean implements Serializable  {
 
     private Deputados parlamentar;
-    
-    @PostConstruct
-    public void init() {
-        parlamentar = (Deputados) FacesContext.getCurrentInstance().getExternalContext().getFlash().get("deputado");
-    }
-    
-    
 
     public Deputados getParlamentar() {
         return parlamentar;

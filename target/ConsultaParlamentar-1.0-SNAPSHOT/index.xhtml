@@ -6,7 +6,7 @@
       xmlns:p="http://primefaces.org/ui" >
     <h:head>
         <title>Consulta Parlamentar</title>
-        <h:outputStylesheet name="estilo.css" library="css" />
+        
         <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
     </h:head>
     <h:body>
@@ -32,7 +32,7 @@
                     </p:column>
                     
                     <p:column exportable="false">
-                        <p:commandButton value="Visualizar Perfil" action="#{parlamentarBaen.irParaPerfil(product)}" />
+                        <p:commandButton value="Visualizar Perfil" action="#{parlamentarBaen.deputado(product)}" />
                     </p:column>
                 </p:dataTable>
             </div>
