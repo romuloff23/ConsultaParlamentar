@@ -7,8 +7,7 @@ package baens.parlamentar;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.enterprise.context.RequestScoped;
-import javax.faces.view.ViewScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 import model.Consulta;
 import model.Deputados;
@@ -18,8 +17,7 @@ import model.Deputados;
  * @author Rômulo Farias
  */
 @Named
-@ViewScoped
-
+@SessionScoped
 public class ParlamentarBaen implements Serializable {
 
     private List<Deputados> allParlamentar;
@@ -40,7 +38,8 @@ public class ParlamentarBaen implements Serializable {
         return allParlamentar;
     }
 
-    public String irPergil(){
+    public String irPergil(Deputados deputadoSelecionado){
+        this.deputadoSelecionado = deputadoSelecionado;
         return "perfil?faces-redirect=true";
     }
 }

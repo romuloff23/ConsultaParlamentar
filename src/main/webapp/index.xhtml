@@ -32,9 +32,7 @@
                     </p:column>
                     
                     <p:column exportable="false">
-                        <p:commandButton value="Visualizar Perfils" process="@this" >
-                            <f:setPropertyActionListener value="#{product}" target="#{parlamentarBaen.setDeputadoSelecionado}"/>
-                        </p:commandButton>
+                        <p:commandButton value="Visualizar Perfils" process="@this" action="#{parlamentarBaen.irPergil(product)}" />
                     </p:column>
                 </p:dataTable>
             </div>
