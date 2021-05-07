@@ -15,7 +15,7 @@ public class Deputados {
 
     private List<Deputados> dados;
     //private List<Deputado> ultimoStatus;
-    private int id;
+    public int id;
     private String nome;
     private String siglaPartido;
     private String urlFoto;

@@ -30,5 +30,17 @@ public class Consulta {
         return deputado.getDados();
     }
     
+    public List<Deputados> getDeputado(String id){
+        Gson gson = new Gson();
+        Client cliente = ClientBuilder.newClient();
+        String url = "https://dadosabertos.camara.leg.br/api/v2/deputados/id";
+        url = url.replace("id", id);
+        Response response = cliente.target(url)
+            .request(MediaType.APPLICATION_JSON_TYPE)
+            .header("Accept", "application/json").get();
+        Deputados deputado = gson.fromJson(response.readEntity(String.class),Deputados.class );
+        return deputado.getDados();
+    }
+    
 }
 

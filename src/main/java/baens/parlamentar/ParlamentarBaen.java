@@ -21,6 +21,7 @@ import model.Deputados;
 public class ParlamentarBaen implements Serializable {
 
     private List<Deputados> allParlamentar;
+    private List<Deputados> parlamentar;
     private Deputados deputadoSelecionado;
 
     public Deputados getDeputadoSelecionado() {
@@ -42,4 +43,12 @@ public class ParlamentarBaen implements Serializable {
         this.deputadoSelecionado = deputadoSelecionado;
         return "perfil?faces-redirect=true";
     }
+    
+    public void carregarDeputado(){
+        Consulta consulta = new Consulta();
+        String id = String.valueOf(deputadoSelecionado.id)  ;
+        parlamentar = consulta.getDeputado(id);
+        System.out.println(parlamentar.get(0).getNomeCivil());
+    }
+    
 }
